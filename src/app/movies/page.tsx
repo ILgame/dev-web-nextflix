@@ -34,8 +34,12 @@ const Page = () => {
             const response = await fetch(`http://localhost:8080/api/nextflixs/movies/${page}?type=now_playing&language=th`);
             const jsonData = await response.json();
             setData(jsonData.data); // อัพเดตข้อมูล
-        } catch (err: any) {
-            setError(err?.message || "Something went wrong!"); // จัดการข้อผิดพลาด
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                console.error(err.message);
+            } else {
+                console.error("Unknown error", err);
+            }
         } finally {
             setLoading(false); // หลังจากโหลดเสร็จให้ตั้งค่า loading เป็น false
         }
@@ -45,11 +49,11 @@ const Page = () => {
         fetchData(pageNumber); // เรียก API เมื่อ pageNumber เปลี่ยนแปลง
     }, [pageNumber]);
 
-    const handleLoadMore = () => {
-        if (data && pageNumber < data.total_pages) {
-            setPageNumber(prevPage => prevPage + 1); // เพิ่ม pageNumber เพื่อโหลดหน้าถัดไป
-        }
-    };
+    // const handleLoadMore = () => {
+    //     if (data && pageNumber < data.total_pages) {
+    //         setPageNumber(prevPage => prevPage + 1); // เพิ่ม pageNumber เพื่อโหลดหน้าถัดไป
+    //     }
+    // };
 
     return (
         <div className='min-h-full'>

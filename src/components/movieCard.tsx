@@ -4,8 +4,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
+interface movieListType {
+    id: string,
+    original_title: string,
+    file_url: string;
+    type: string;
+    detail: string
+}
 interface MovieCardProps {
-    data: Record<string, any>;
+    data: movieListType;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {

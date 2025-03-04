@@ -1,9 +1,16 @@
 import React from 'react';
 import MovieCard from './movieCard';
 
+interface movieListType {
+    id: string,
+    original_title: string,
+    file_url: string;
+    type: string;
+    detail: string
+}
 interface movieListProps {
     title: string,
-    data: Record<string, any>;
+    data: movieListType[];
 }
 
 const MovieList: React.FC<movieListProps> = ({ title, data }) => {
