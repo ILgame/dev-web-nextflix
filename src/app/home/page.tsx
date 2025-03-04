@@ -25,7 +25,7 @@ const movie: movieListType[] = [
     { id: '6', file_url: '/image/Card (5).png', type: '', detail: '', original_title: '' },
     { id: '7', file_url: '/image/Card (6).png', type: '', detail: '', original_title: '' },
 ];
-const page = () => {
+const Page = () => {
     // const router = useRouter();
     return (
         <div className='min-h-full'>
@@ -132,4 +132,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

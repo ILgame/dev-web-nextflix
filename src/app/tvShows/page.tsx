@@ -20,7 +20,7 @@ const movie: movieListType[] = [
     { id: '7', file_url: '/image/Card (6).png', type: '', detail: '', original_title: '' },
 ];
 
-const page = () => {
+const Page = () => {
     return (
         <div className='min-h-full'>
             <div className='flex-1 flex flex-col'>
@@ -38,4 +38,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

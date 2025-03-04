@@ -21,7 +21,7 @@ interface movieListType {
     detail: string
 }
 
-const page = () => {
+const Page = () => {
     const [data, setData] = useState<Root | null>(null); // ข้อมูลแรก
     const [pageNumber, setPageNumber] = useState(1); // การตั้งค่าหน้าเริ่มต้น
     const [loading, setLoading] = useState(false); // ใช้เพื่อตรวจสอบสถานะการโหลด
@@ -116,4 +116,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
