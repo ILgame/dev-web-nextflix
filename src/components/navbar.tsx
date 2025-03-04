@@ -14,7 +14,7 @@ interface navbarItem {
 
 const TOP_OFFSET = 66;
 
-const navbar = () => {
+const Navbar = () => {
   const router = useRouter();
 
   const [showBackground, setShowBackground] = useState(false);
@@ -92,4 +92,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

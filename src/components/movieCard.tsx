@@ -8,7 +8,7 @@ interface MovieCardProps {
     data: Record<string, any>;
 }
 
-const movieCard: React.FC<MovieCardProps> = ({ data }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
     // const router = useRouter();
 
     return (
@@ -83,4 +83,4 @@ const movieCard: React.FC<MovieCardProps> = ({ data }) => {
     );
 };
 
-export default movieCard;
+export default MovieCard;

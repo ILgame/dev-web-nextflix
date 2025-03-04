@@ -6,7 +6,7 @@ interface movieListProps {
     data: Record<string, any>;
 }
 
-const movieList: React.FC<movieListProps> = ({ title, data }) => {
+const MovieList: React.FC<movieListProps> = ({ title, data }) => {
     if (data.length < 1) {
         return null
     }
@@ -29,4 +29,4 @@ const movieList: React.FC<movieListProps> = ({ title, data }) => {
     );
 };
 
-export default movieList;
+export default MovieList;
