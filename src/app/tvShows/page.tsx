@@ -48,7 +48,7 @@ const Page = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`https://nest-service-00xg.onrender.com/api/nextflixs/tv-shows/${page}?type=${type}&language=th`);
+            const response = await fetch(`https://nest-service-production.up.railway.app/api/nextflixs/tv-shows/${page}?type=${type}&language=th`);
             const jsonData = await response.json();
             if (jsonData.statusCode === 200) {
                 setShowAction(true);
