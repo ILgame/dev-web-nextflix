@@ -84,7 +84,8 @@ const Navbar = () => {
       <div className={`lg:hidden flex flex-row items-center gap-7 cursor-pointer justify-center w-full py-0 px-2 sm:px-4 ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}`}>
         {navar.map((element, index) => (
           (element.mode === 'All' || element.mode === 'Mobile') && (
-            <div className='text-white cursor-pointer hover:text-gray-300 transition' key={index}>{element.label}</div>
+            <div className='text-white cursor-pointer hover:text-gray-300 transition' key={index}
+            onClick={() => router.push(`${element.route}`)}>{element.label}</div>
           )
         ))}
       </div>
