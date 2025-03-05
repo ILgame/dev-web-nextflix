@@ -35,7 +35,7 @@ const Page = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`http://localhost:8080/api/nextflixs/search-muti/${page}?term=${search}&language=th`);
+            const response = await fetch(`https://nest-service-00xg.onrender.com/api/nextflixs/search-muti/${page}?term=${search}&language=th`);
             const jsonData = await response.json();
             if (search != '') {
                 setPageNumber(1)
