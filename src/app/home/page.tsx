@@ -35,10 +35,13 @@ const Page = () => {
                     <img
                         src="/image/Main_Show_BG.png"
                         alt="main"
-                        className='w-full h-[56.25vw] object-cover brightness-[60%]'
+                        className='w-full 
+                        h-[470px] lg:h-full
+                        object-cover 
+                        brightness-[60%]'
                     />
                     <div className='absolute 
-                    h-full
+                    h-[470px] lg:h-full
                     content-end lg:content-center
                     top-0 
                     grid gap-3 
@@ -55,6 +58,10 @@ const Page = () => {
                             alt="title"
                             className='w-[42vw] h-[12vw]'
                         />
+                        <p className='lg:hidden md:hidden flex gap-3 text-md'>
+                            <span>TV Mysteries</span>
+                            <span>Based on Books</span>
+                        </p>
                         <div className='hidden flex-row justify-items-start items-center w-full lg:flex md:flex gap-3'>
                             <img
                                 src="/icon/Top10.png"
@@ -118,7 +125,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className='absolute
+                    <div className='static lg:absolute
                         top-[100%] lg:top-[85%]
                         w-full 
                         mt-4

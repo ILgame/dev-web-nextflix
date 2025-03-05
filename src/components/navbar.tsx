@@ -62,11 +62,11 @@ const Navbar = () => {
             className='h-8 lg:h-7 lg:hidden cursor-pointer'
             onClick={() => router.push('/home')}
           />
-          <div className='flex-row lg:flex ml-8 gap-7 hidden'>
+          <div className='flex-row ml-8 gap-7 hidden lg:flex'>
             {navar.map((element, index) => (
               (element.mode === 'All' || element.mode === 'Web') && (
                 <div className='text-white cursor-pointer hover:text-gray-300 transition' key={index}
-                onClick={() => router.push(`${element.route}`)}
+                  onClick={() => router.push(`${element.route}`)}
                 >{element.label}</div>
               )
             ))}
@@ -74,14 +74,14 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-3'>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <span>Kids</span>
-          <FontAwesomeIcon icon={faBell} />
-          <FontAwesomeIcon icon={faSquare} />
+          <span className='cursor-pointer' onClick={() => router.push('/search')}><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
+          <span className='hidden lg:block'>Kids</span>
+          <span className='hidden lg:block'><FontAwesomeIcon icon={faBell} /></span>
+          <span><FontAwesomeIcon icon={faSquare} className='text-3xl' /></span>
         </div>
       </div>
 
-      <div className='lg:hidden flex flex-row items-center gap-7 cursor-pointer justify-center w-full py-0 px-2 sm:px-4'>
+      <div className={`lg:hidden flex flex-row items-center gap-7 cursor-pointer justify-center w-full py-0 px-2 sm:px-4 ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}`}>
         {navar.map((element, index) => (
           (element.mode === 'All' || element.mode === 'Mobile') && (
             <div className='text-white cursor-pointer hover:text-gray-300 transition' key={index}>{element.label}</div>

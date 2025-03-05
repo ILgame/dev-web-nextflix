@@ -1,38 +1,36 @@
-// "use client";
+"use client";
 
-// import Navbar from "@components/navbar";
-
-// import { useState, useEffect } from 'react'
-// import Image from "next/image";
-
-// interface Data {
-//   id: number;
-//   title: string;
-//   body: string;
-// }
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  // const [data, setdata] = useState<Data[]>([]);
-
-  // console.log(data)
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  //       const jsonDta = await response.json();
-  //       setdata(jsonDta);
-  //     } catch(err) {
-  //       console.log(err)
-  //     }
-  //   }
-
-  //   fetchData();
-
-  // }, []);
+  const router = useRouter();
 
   return (
     <main>
+      <div className="flex items-center h-full justify-center">
+        <div className="flex flex-col absolute top-[30%]">
+          <div className="flex items-center justify-center gap-8 mt-10">
+            <div onClick={() => router.push('/home')}>
+              <div className="group flex-row w-44 mx-auto">
+                <div className="w-44
+                h-44
+                bg-red-600
+                rounded-md
+                flex
+                items-center
+                justify-center
+                border-2
+                border-transparent
+                group-hover:cursor-pointer
+                group-hover:border-white
+                overflow-hidden">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

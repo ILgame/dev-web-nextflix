@@ -19,7 +19,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
     // const router = useRouter();
 
     return (
-        <div className='group bg-zinc-900 row-span relative h-auto                 w-full'>
+        <div className='group bg-zinc-900 row-span relative h-auto w-full overflow-visible'>
             <img
                 className='
                 cursor-pointer
@@ -41,14 +41,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             top-0
             transition
             duration-200
-            z-10
+            z-50
             invisible sm:visible
             delay-300
             w-full
             scale-0
             group-hover:scale-110
-            group-hover:-translate-y-[4vw]
-            group-hover:traslate-x-[2vw]
+            group-hover:-translate-y-[1vw]
+            group-hover:translate-x-[1vw]
             group-hover:opacity-100
             '>
                 <img src={data.file_url} alt='poppular' className='w-full' />
@@ -78,9 +78,13 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
                         </div>
                         <span className='text-white text-[10px] text-md lg:text-lg text-wrap'>{data.original_title}</span>
                     </div>
-                    <div className='flex flex-row mt-4 gap-2 item-start'>
-                        <li className='text-white text-[10px] lg:text-sm'>{data.type}</li>
-                    </div>
+                    {
+                        data.type !== '' && (
+                            <div className='flex flex-row mt-4 gap-2 item-start'>
+                                <li className='text-white text-xl lg:text-2xl'>{data.type}</li>
+                            </div>
+                        )
+                    }
                     <div className='flex flex-row mt-4 gap-2 item-start'>
                         <p className='text-white text-[10px] lg:text-sm text-wrap'>{data.detail}</p>
                     </div>
