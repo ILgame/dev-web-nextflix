@@ -27,7 +27,7 @@ const MovieList: React.FC<movieListProps> = ({ title, data }) => {
                 <div className="grid 
                 overflow-visible 
                 relative
-                grid-cols-6 lg:grid-cols-7
+                grid-cols-4 lg:grid-cols-7
                 gap-3 lg:gap-2 
                 lg:min-w-max
                 whitespace-nowrap">
